@@ -1,0 +1,2 @@
+para crear una nueva aplcacion
+    python manage.py startapp
