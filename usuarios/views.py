@@ -30,5 +30,5 @@ class MyTokenObtainPairView(TokenObtainPairView):
                     'user': user_serializer.data,
                     'message': 'Inicio de Sesion Existoso'
                 }, status=status.HTTP_200_OK)
-            return Response({'error': 'Contraseña o nombre de usuario incorrectos 1', "err": login_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-        return Response({'error': 'Contraseña o nombre de usuario incorrectos 2'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error': 'datos incorrectos :(', "err": login_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': 'el usario con estas credenciales no existe'}, status=status.HTTP_400_BAD_REQUEST)
