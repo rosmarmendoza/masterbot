@@ -7,7 +7,7 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Permis
 class UserManager(BaseUserManager):
     def _create_user(self, name, last_name, email, password, is_staff, is_superuser, **extra_fields):
         user = self.model(
-            username = name+"_"+last_name,
+            username=name+"_"+last_name,
             name=name,
             last_name=last_name,
             email=email,
@@ -33,10 +33,8 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     password = models.CharField(max_length=100, null=False)
     remember_password = models.CharField(max_length=100, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    
-    is_active = models.BooleanField(default = True)
-    is_staff = models.BooleanField(default = False)
-    
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
