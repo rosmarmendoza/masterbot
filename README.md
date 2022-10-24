@@ -17,8 +17,8 @@
 python manage.py runserver
 
 ### Para probar Login y obtener un token válido deberá enviar una petición de tipo POST a http://127.0.0.1:8000/user/auth definir en un FormData las siguientes atributos:
-    email => email creado cuando configuró superuser
-    password => contraseña creada cuando configuró superuser
+    email => email
+    password => contraseña 
 Como respuesta visualizará el access token y refresh token.
 
 ## Urls:
