@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate
 def get_usuarios(request):
     usuarios = Usuario.objects.all()
     if len(usuarios) <= 0:
-        return Response( data={"message":"No exiten datos"},status=status.HTTP_204_NO_CONTENT)
+        return Response(data={"message":"No existen datos"},status=status.HTTP_204_NO_CONTENT)
 
     usuarios_serializados = UsuarioModelSerializer(usuarios, many=True)
     return Response(usuarios_serializados.data, status=status.HTTP_200_OK)
