@@ -7,7 +7,6 @@
  2. Dentro de ella crear un entorno virtual usando virtualenv. virtualenv venv
  3. Activar el entorno en Linux. source venv/bin/activate
  4. Clona el repositorio con:
-    git clone https://github.com/DEVoluzion/backend.git
  5. Instala los requerimientos con:
 
  6. pip install -r requirements.txt
