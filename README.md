@@ -32,7 +32,7 @@ Como respuesta visualizará el access token y refresh token.
     Eliminar
         http://127.0.0.1:8000/user/delete/<int:id>
 
-##Docker image
+## Docker image
 
 Run next command
 
