@@ -31,3 +31,9 @@ Como respuesta visualizará el access token y refresh token.
         http://127.0.0.1:8000/user/update/<int:id>
     Eliminar
         http://127.0.0.1:8000/user/delete/<int:id>
+
+##Docker image
+
+Run next command
+
+$>docker build --build-arg ARG_DEFAULT_PORT=8000 -t master_bot .
