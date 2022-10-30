@@ -1,12 +1,12 @@
-# Install dependencies
-RUN pip install pipenv
-COPY Pipfile* /
-RUN pipenv lock --requirements > requirements.txt
-RUN apk add --update --no-cache --virtual .tmp gcc libc-dev
-RUN pip install -r requirements.txt
+FROM python:3.10-alpine AS Builder
 # Copy sources files
 WORKDIR /code
 COPY . .
+
+# Install dependencies
+RUN apk add --update --no-cache --virtual .tmp gcc libc-dev
+RUN pip install -r requirements.txt
+
 # Default port
 ARG ARG_DEFAULT_PORT=8000
 EXPOSE $ARG_DEFAULT_PORT
