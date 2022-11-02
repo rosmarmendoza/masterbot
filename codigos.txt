@@ -1,0 +1,8 @@
+para crear una nueva aplcacion
+    python manage.py startapp
+
+para crear un super usuario
+    python manage.py createsuperuser
+
+para eliminar los proceso en un puerto
+    npx kill-port 8000
